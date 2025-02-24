@@ -1,43 +1,35 @@
 package Proyectonetwork;
 
 public class Usuario {
+    private String nickname;
     private String nombre;
-    private String nick;
-    private int idPersona;
-    private static int contadorP = 0;
+    private int id;
 
-    Usuario(String nombre, String nick) {
+    public Usuario(String nickname, String nombre, int id) {
+        this.nickname = nickname;
         this.nombre = nombre;
-        this.nick = nick;
-        this.idPersona = contadorP++;
-
+        this.id = id;
+    }
+    public String getNickname() {
+        return nickname;
+    }
+    public void setNickname(String nickname) {
+        this.nickname = nickname;
     }
 
     public String getNombre() {
         return nombre;
     }
-
     public void setNombre(String nombre) {
         this.nombre = nombre;
     }
 
-    public String getNick() {
-        return nick;
+    public int getId() {
+        return id;
     }
 
-    public void setNick(String nick) {
-        this.nick = nick;
-    }
-
-    public int getIdPersona() {
-        return idPersona;
-    }
-
-    public void setIdPersona(int idPersona) {
-        this.idPersona = idPersona;
-    }
-
-    public static int getContadorP() {
-        return contadorP;
+    @Override
+    public String toString() {
+        return "Usuarios: " + "nickname = " + nickname + " - nombre = " + nombre + " - id = " + id;
     }
 }

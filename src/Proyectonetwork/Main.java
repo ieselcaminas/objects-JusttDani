@@ -1,19 +1,24 @@
 package Proyectonetwork;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class Main {
     public static void main(String[] args) {
-        Mensaje n1 = new Mensaje();
-        Mensaje n2 = new Mensaje();
 
-        Usuario Dani = new Usuario("Dani", "eldani");
-        Usuario Danis = new Usuario("Dani", "eldani");
+        List<Publicacion> lista = new ArrayList<>();
 
-        Usuario Daniser = new Usuario("Dani", "eldani");
+        Usuario Juan = new Usuario("Illoju","Juan", 1);
+        Mensaje mensaje = new Mensaje(Juan, 1, "Grande juan");
+        lista.add(mensaje);
 
-        n1.darlike(Dani);
-        n1.darlike(Danis);
-        n1.darlike(Daniser);
 
-        System.out.println(n1.getLikeadores());
+        Usuario Kike = new Usuario("ErKike","Kike", 2);
+        Foto fotografia = new Foto(Kike,"kikada.jpg", "literalmente kike");
+        lista.add(fotografia);
+
+        System.out.println(mensaje);
+        System.out.println(fotografia);
+
     }
 }

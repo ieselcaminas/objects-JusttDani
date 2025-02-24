@@ -1,8 +1,11 @@
 package ProyectoTrabajadores;
 
 public class Operario extends Empleado{
-    Operario(String nombre){
+    public Operario(String nombre) {
         super(nombre);
     }
-
+    @Override
+    public String toString() {
+        return "Cargo: " + this.getNombre();
+    }
 }

@@ -1,37 +1,38 @@
 package Proyectonetwork;
 
-import java.util.ArrayList;
+import java.util.Date;
 
-public class Publicacion {
-    private static int contador = 0;
-    private int idPublicacion;
-    private int likes = 0;
-    private ArrayList<String> likeadores = new ArrayList<String>();
+public abstract class Publicacion {
+    private Usuario usuario;
+    private Date fecha;
+    private Mensaje mensaje;
+    private int like;
 
-    public Publicacion() {
-        this.idPublicacion = ++contador;
+    public Publicacion (Usuario usuarios){
+        this.usuario = usuarios;
+        this.fecha = new Date();
+        this.like = 0;
     }
 
-    public int getIdPublicacion() {
-        return idPublicacion;
+    public Usuario getUsuario() {
+        return usuario;
+    }
+    public void setUsuario(Usuario usuario) {
+        this.usuario = usuario;
     }
 
-    public void setIdPublicacion(int idPublicacion) {
-        this.idPublicacion = idPublicacion;
+    public Date getFecha(){
+        return fecha;
     }
 
-    public void darlike(Usuario usuario) {
-        likes++;
-        likeadores.add(usuario.getNick());
+    public int getLike(){
+        return like;
     }
 
-    public int getLikes() {
-        return likes;
+    public void setLike(int like){
+        this.like = like + 1;
     }
-
-    public ArrayList<String> getLikeadores() {
-        return likeadores;
+    public void setDislike(int like){
+        this.like = like - 1;
     }
 }
-
-

@@ -3,6 +3,7 @@ package animalitos;
 public class Gato extends Mamifero {
     public Gato(String nombre) {
         super(nombre);
+        setSpecie("Gato");
     }
 
     public void comunicarse()

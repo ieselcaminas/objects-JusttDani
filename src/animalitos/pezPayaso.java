@@ -12,4 +12,5 @@ public class pezPayaso extends Pez{
     public void moverse() {
         System.out.println("Me muevo por el agua");
     }
+
 }

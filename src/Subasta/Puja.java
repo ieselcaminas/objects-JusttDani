@@ -15,6 +15,7 @@ public class Puja {
         this.lote = lote;
         this.subasta = subasta;
         this.pujadores = new ArrayList<>();
+        subasta.añadirPuja(this);
     }
 
     public int getId() {

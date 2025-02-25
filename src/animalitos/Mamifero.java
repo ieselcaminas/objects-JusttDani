@@ -23,4 +23,6 @@ public abstract class Mamifero extends Animal {
     public void moverse() {
         System.out.println("Tengo patas pa moverme");
     }
+
+
 }

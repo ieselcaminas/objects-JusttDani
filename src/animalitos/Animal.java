@@ -33,4 +33,5 @@ public abstract class Animal {
     public abstract void respirar();
 
     public abstract void moverse();
+
 }

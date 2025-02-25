@@ -9,6 +9,7 @@ public class Pujador {
         this.dni = dni;
         this.nombre = nombre;
         this.puja = puja;
+        puja.getPujadores().add(this);
     }
 
     public String getDni() {

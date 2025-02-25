@@ -44,7 +44,6 @@ public class Sucursal {
     }
     @Override
     public String toString(){
-        //Sólo devolver datos de esta clase, no de Banco
         return this.n_suc + " - " + this.localizacion;
     }
 }
